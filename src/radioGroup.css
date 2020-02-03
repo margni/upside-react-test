@@ -1,0 +1,43 @@
+.RadioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem;
+}
+
+.RadioGroup__Title {
+    flex: 100%;
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin: 0 .5rem;
+}
+
+.RadioGroup__Radio {
+    opacity: 0;
+    position: absolute;
+}
+
+.RadioGroup__Radio:focus + .RadioGroup__Label
+{
+    border-color: red;
+}
+
+.RadioGroup__Radio:checked + .RadioGroup__Label {
+    background: #EEE;
+}
+
+.RadioGroup__Label {
+    align-items: center;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    height: 10rem;
+    justify-content: center;
+    margin: .5rem;
+    width: 10rem;
+}
+
+.RadioGroup__Name {
+    display: block;
+    font-weight: bold;
+}

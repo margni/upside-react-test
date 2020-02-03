@@ -1,0 +1,42 @@
+.Order__Button {
+    display: block;
+}
+
+.Order__Button--right {
+    float: right;
+}
+
+.Order__Header {
+    display: flex;
+    padding: 1rem 0;
+}
+
+.Order__Heading {
+    flex: 1;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.Order__Footer {
+    display: flex;
+    padding: 1rem 0;
+}
+
+.Order__Price {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.Order__Item {
+    border-top: 1px solid black;
+    padding: .5rem 0;
+    display: flex;
+}
+
+.Order__Pizza {
+    flex: 1;
+    margin: 0 1rem 0 0;
+}
