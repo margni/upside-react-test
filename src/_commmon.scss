@@ -1,0 +1,53 @@
+@mixin h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+@mixin h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+@mixin h3 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+@mixin h4 {
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+@mixin selector($checkClass, $labelClass) {
+    .#{$checkClass}:focus + .#{$labelClass}
+    {
+        box-shadow: 0 0 10px green;
+    }
+
+    .#{$checkClass}:checked + .#{$labelClass} {
+        background: #f7f7e1;
+        color: #000;
+        transform: scale(1.05);
+    }
+
+    .#{$labelClass} {
+        align-items: center;
+        border: 1px solid #666;
+        border-radius: 50%;
+        color: #666;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+        height: 9rem;
+        justify-content: center;
+        margin: .5rem;
+        padding: .5rem;
+        text-align: center;
+        transition: all .5s;
+        width: 9rem;
+    }
+}

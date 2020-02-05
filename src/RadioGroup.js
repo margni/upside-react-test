@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Currency} from './Currency';
 
-import './radioGroup.css';
+import './radioGroup.scss';
 
 export const RadioGroup = ({onSelect, selected, options, name}) => <div className="RadioGroup">
     <h2 className="RadioGroup__Title">{name}</h2>

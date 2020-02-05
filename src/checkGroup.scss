@@ -1,0 +1,26 @@
+@import "commmon";
+
+.CheckGroup {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem -.5rem;
+}
+
+.CheckGroup__Title {
+    @include h3;
+    flex: 100%;
+    margin: 0 .5rem;
+}
+
+.CheckGroup__Checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+@include selector("CheckGroup__Checkbox", "CheckGroup__Label");
+
+.CheckGroup__Name {
+    @include h4;
+    display: block;
+    margin-bottom: .5rem;
+}

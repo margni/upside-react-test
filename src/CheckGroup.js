@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Currency} from './Currency';
 
-import './checkGroup.css';
+import './checkGroup.scss';
 
 export const CheckGroup = ({onSelect, selected, options, name}) => <div className="CheckGroup">
     <h3 className="CheckGroup__Title">{name}</h3>

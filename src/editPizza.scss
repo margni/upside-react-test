@@ -1,0 +1,39 @@
+@import "commmon";
+
+.EditPizza {
+    padding: 0 16rem 0 0;
+}
+
+.EditPizza__Heading {
+    @include h2;
+}
+
+.EditPizza__Aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    width: 15rem;
+    background: #FFF;
+}
+
+.EditPizza__Done {
+    float: right;
+}
+
+@media all and (max-width: 600px) {
+    .EditPizza {
+        padding: 0 0 4rem 0;
+    }
+
+    .EditPizza__Aside {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: auto;
+    }
+
+    .EditPizza__Summary {
+        display: none;
+    }
+}

@@ -1,6 +1,6 @@
 import {ADD_PIZZA, MODIFY_PIZZA, REMOVE_PIZZA} from '../actions';
 
-const getPizzaTotal = (pizza) => pizza.size.price + pizza.base.price + pizza.toppings.reduce((total, topping) => total + topping.price, 0);
+const getPizzaTotal = (pizza) => (pizza.size?.price || 0) + (pizza.base?.price || 0) + pizza.toppings.reduce((total, topping) => total + topping.price, 0);
 const makeOrder = items => ({items, total: items.reduce((total, pizza) => total + pizza.total, 0)});
 
 // todo just use an external to do immutable state.
@@ -10,8 +10,10 @@ export const newOrder = (order = {items: [], total: 0}, action) => {
             return makeOrder([
                 ...order.items,
                 {
-                    ...action.pizza,
-                    total: getPizzaTotal(action.pizza)
+                    size: undefined,
+                    base: undefined,
+                    toppings: [],
+                    total: 0
                 }
             ]);
 
